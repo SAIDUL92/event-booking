@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Book Event</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
- <?php require_once __DIR__ . "/partials/header.php"; ?>
+<?php require_once __DIR__ . "/partials/header.php"; ?>
 
 <main class="container">
   <h1>Book Your Seat</h1>
@@ -20,6 +11,3 @@
 </main>
 
 <?php require_once __DIR__ . "/partials/footer.php"; ?>
-<script src="assets/js/main.js"></script>
-</body>
-</html>

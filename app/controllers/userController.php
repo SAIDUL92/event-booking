@@ -8,6 +8,7 @@ class UserController
 {
     public function index()
     {
+        $pageTitle = "User List home test";
         $userModel = new User();
         $users = $userModel->all();
 
