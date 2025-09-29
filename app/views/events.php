@@ -13,86 +13,17 @@
   </div>
 
   <div class="event-grid">
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
+    <?php foreach ($events as $event): ?>
+      <div class="event-card">
+        <img src="/event-booking/public/<?= htmlspecialchars($event['image']) ?>" alt="">
+        <div class="event-card-content">
+          <h3><a href="event-detail/<?= $event['id'] ?>"><?= htmlspecialchars($event['name']) ?></a></h3>
+          <p><?= htmlspecialchars($event['location']) ?> • <?= date('d M Y', strtotime($event['date'])) ?></p>
+          <a href="event-detail/<?= $event['id'] ?>" class="btn btn-secondary">View Details</a>
+
+        </div>
       </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="/event-booking/public/assets/images/event1.jpg" alt="">
-      <div class="event-card-content">
-        <h3><a href="event-detail">Tech Conference 2025</a></h3>
-        <p>Dhaka • 20 Oct 2025</p>
-        <a href="event-detail" class="btn btn-secondary">View Details</a>
-      </div>
-    </div>
+    <?php endforeach; ?>
     <!-- repeat cards dynamically -->
   </div>
 </main>
