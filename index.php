@@ -194,14 +194,14 @@ switch ($route) {
 
     case 'users':
         // Admin only
-        session_start();
-        if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
-            header('Location: /event-booking/login');
-            exit;
-        }
-        // require_once __DIR__ . '/app/controllers/UserController.php';
-        // $controller = new UserController();
-        // $controller->index();
+        // session_start();
+        // if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
+        //     header('Location: /event-booking/login');
+        //     exit;
+        // }
+        require_once __DIR__ . '/app/controllers/UserController.php';
+        $controller = new UserController();
+        $controller->index();
         break;
 
     case 'api':

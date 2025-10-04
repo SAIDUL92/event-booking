@@ -67,7 +67,7 @@ class EventController
             $result = $this->eventModel->create($eventData);
 
             if ($result['success']) {
-                header('Location: /event-booking/events');
+                header('Location: /event-booking/dashboard');
                 exit;
             } else {
                 $error = $result['message'];
